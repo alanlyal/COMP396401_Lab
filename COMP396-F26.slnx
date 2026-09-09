@@ -42,8 +42,8 @@
   <Project Path="Unity.Splines.Editor.csproj" />
   <Project Path="Unity.PerformanceTesting.csproj" />
   <Project Path="Unity.InputSystem.ForUI.csproj" />
-  <Project Path="Unity.TextMeshPro.csproj" />
   <Project Path="TinyGiantStudio.BetterInspector.Editor.csproj" />
+  <Project Path="Unity.TextMeshPro.csproj" />
   <Project Path="Unity.TextMeshPro.Editor.csproj" />
   <Project Path="Unity.AppUI.Navigation.Editor.csproj" />
   <Project Path="Unity.AppUI.InternalAPIBridge.csproj" />
