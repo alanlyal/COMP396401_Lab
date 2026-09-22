@@ -22,9 +22,9 @@ namespace Core.FSM
             stateMachine.AddTransition(harvest, rest, new FuncPredicate(() => Keyboard.current.rKey.wasPressedThisFrame));
             stateMachine.AddTransition(patrol, rest, new FuncPredicate(() => Keyboard.current.rKey.wasPressedThisFrame));
             //challenge stuff
-            stateMachine.AddTransition(rest, sharp, new FuncPredicate(() => Keyboard.current.bKey.wasPressedThisFrame));// rest to sharp
+            stateMachine.AddTransition(rest, sharp, new FuncPredicate(() => Keyboard.current.bKey.wasPressedThisFrame));// rest to sharp aka go to the sharping area
             stateMachine.AddTransition(sharp, rest,new FuncPredicate(() => Keyboard.current.rKey.wasPressedThisFrame));// sharp to rest
-            stateMachine.AddTransition(rest, chop,new FuncPredicate(() => Keyboard.current.cKey.wasPressedThisFrame));// rest to chop
+            stateMachine.AddTransition(rest, chop,new FuncPredicate(() => Keyboard.current.cKey.wasPressedThisFrame));// rest to chop aka go to a chopping area
             stateMachine.AddTransition(chop, rest,new FuncPredicate(() => Keyboard.current.rKey.wasPressedThisFrame));// chop to rest
             stateMachine.SetState(rest);
         }
