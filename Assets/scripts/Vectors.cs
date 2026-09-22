@@ -6,11 +6,11 @@ public class Vectors : MonoBehaviour
 {
     [SerializeField] private Vector3 _v1,_v2, _v3;
     [SerializeField] private Transform _player, _enemy;
-    [SerializeField] private float _k;
+    [SerializeField] private float _k; // _ mean private 
     [SerializeField] private Dictionary<int, Vector3> _matrix = new Dictionary<int, Vector3>();
     public float k;
-    public static float s_k;
-    public const float K = 3.4f;
+    public static float s_k; //s_ mean public static 
+    public const float K = 3.4f; // capital letter means public const
     void Start()
     {
         _v1 = _player.position;
