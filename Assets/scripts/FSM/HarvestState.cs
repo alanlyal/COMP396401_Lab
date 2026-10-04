@@ -18,6 +18,11 @@ namespace Core.FSM
             meshRenderer.material.color = Color.green;
 
             HarvestingPlot = GameObject.FindGameObjectWithTag("HarvestingPlot");
+            if (HarvestingPlot == null)
+            {
+                Debug.LogError("No object tagged HarvestingPlot");
+                return;
+            }
 
             agent.SetDestination(HarvestingPlot.transform.position);
             agent.isStopped = false;
@@ -31,6 +36,7 @@ namespace Core.FSM
             base.Exit();
             HarvestingPlot = null;
         }
+     
     }
 
 }   
