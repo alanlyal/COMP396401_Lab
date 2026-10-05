@@ -800,6 +800,60 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1135855372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1135855374}
+  - component: {fileID: 1135855373}
+  m_Layer: 0
+  m_Name: BoidSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1135855373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135855372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74d9d433c6b85f0448f1b981b0e36c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Core::BoidSpawner
+  boidPrefab: {fileID: 8164829087376806121, guid: 0486a93a6d7ced34a8d66f0ebe32a96e, type: 3}
+  boidCount: 32
+  spawnArea: {fileID: 1135855374}
+  spawnOffset: {x: 14, y: 14, z: 14}
+  boidSize: 1
+  BoidBaseSpeed: 7
+  BoidSpeedVariation: 1.5
+  flockBoundRadius: 30
+  boidHeightConstraint: 4
+  shouldConstrainHeight: 0
+--- !u!4 &1135855374
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135855372}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1333704105
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,3 +1103,4 @@ SceneRoots:
   - {fileID: 615063632}
   - {fileID: 7150083}
   - {fileID: 1668521989}
+  - {fileID: 1135855374}
