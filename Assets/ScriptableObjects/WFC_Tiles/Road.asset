@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12d3ce1583af8284ea5eaf16146d9688, type: 3}
+  m_Name: Road
+  m_EditorClassIdentifier: Core::Core.WFC.TileData
+  tileName: Roads
+  prefab: {fileID: 5591205625255005890, guid: 26be1c006223ed64e911911fa7f59b92, type: 3}
+  validBottom:
+  - {fileID: 11400000}
+  - {fileID: 11400000, guid: 89ec7f2c5320b0041a7ec35d03ea9747, type: 2}
+  validLeft:
+  - {fileID: 11400000}
+  - {fileID: 11400000, guid: a4abb7694e1609444bd40b255a1e9a37, type: 2}
+  validRight:
+  - {fileID: 11400000}
+  - {fileID: 11400000, guid: cc832bd4d9cc443448f3278d9170ef1b, type: 2}
+  validTop:
+  - {fileID: 11400000}
+  - {fileID: 11400000, guid: 60e3d25fccb5b7f4b934035bd6311f68, type: 2}
