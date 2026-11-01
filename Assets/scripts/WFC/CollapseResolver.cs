@@ -31,7 +31,7 @@ public class CollapseResolver : MonoBehaviour
     [SerializeField] private Color domainAlmostColor = new Color(1f, 0.35f, 0.1f);
     [SerializeField] private Color contradictionColor = Color.red;
     [Header("challenge")]//added
-    [SerializeField] private NavMeshSurface navSurface;//added
+    [SerializeField] private NavMeshSurface navMesh;//added
     private GridCreator gridCreator;
     private readonly Dictionary<TileType, Material> materialLookup = new Dictionary<TileType, Material>();
     [SerializeField] private Shader shader;
@@ -49,6 +49,9 @@ public class CollapseResolver : MonoBehaviour
     [SerializeField] private Texture2D maskCornerNE;
     [SerializeField] private Texture2D maskCornerSE;
     [SerializeField] private Texture2D maskCornerSW;
+    [SerializeField] private float createTimer = 0.1f;
+    private float timer = 0f;
+    private bool isAutoCreate = false;
 
     private void Start()
     {
@@ -58,7 +61,10 @@ public class CollapseResolver : MonoBehaviour
             enabled = false;
             return;
         }
-
+        if (navMesh == null)
+        {
+            navMesh = gameObject.GetOrAddComponent<NavMeshSurface>();
+        }
         materialLookup.Clear();
         var activeTypes = new List<TileType>();
 
@@ -82,6 +88,7 @@ public class CollapseResolver : MonoBehaviour
 
         gridCreator = new GridCreator();
         gridCreator.InitializeTileGrid(width, height, tilePrefab, activeTypes.ToArray(), tileSize, gridRoot);
+        navMesh.BuildNavMesh();
         RefreshViews();
     }
 
@@ -90,6 +97,16 @@ public class CollapseResolver : MonoBehaviour
         if (gridCreator == null || Keyboard.current == null) return;
 
         if (Keyboard.current.spaceKey.wasPressedThisFrame) StepOnce();
+        if (Keyboard.current.pKey.wasPressedThisFrame) isAutoCreate = !isAutoCreate;
+        if (isAutoCreate)
+        {
+            timer += Time.deltaTime;
+            if (timer > createTimer)
+            {
+                StepOnce();
+                timer = 0;
+            }
+        }
 
         if (Keyboard.current.rKey.wasPressedThisFrame)
         {
@@ -107,7 +124,9 @@ public class CollapseResolver : MonoBehaviour
         {
             case StepResult.Complete:
                 Debug.Log("[WFC] Grid complete.");
-                if (navSurface != null) navSurface.BuildNavMesh();//added
+                //invoke the action to generate NavMesh Volume Modifier to block water tiles or generate them inside the stepcall
+                //after completion, bake nav mesh surface
+                navMesh.BuildNavMesh();
                 break;
 
             case StepResult.Contradiction:

@@ -48,7 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Core::TileObject
   target: {fileID: 3724004771115486386}
   domainMaterial: {fileID: 0}
-  countLabel: {fileID: 7275834757937644766}
+  countLabel: {fileID: 0}
+  navModifier: {fileID: 0}
 --- !u!1 &6198747324068680820
 GameObject:
   m_ObjectHideFlags: 0
@@ -66,7 +67,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6492773397573356342
 Transform:
   m_ObjectHideFlags: 0
