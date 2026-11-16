@@ -9,4 +9,9 @@ public abstract class GenericEventChannel<T> : ScriptableObject
     {
         OnEventRaised?.Invoke(default);
     }
+
+    public void RaiseEvent(T value)
+    {
+        OnEventRaised?.Invoke(value);
+    }
 }
