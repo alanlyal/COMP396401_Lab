@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 8709494980676961243}
   - component: {fileID: 55319641063707059}
   - component: {fileID: 161408619109320294}
+  - component: {fileID: 4107738294139742809}
   m_Layer: 0
   m_Name: BT_Guard
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,6 +156,7 @@ MonoBehaviour:
   - rid: 1056179130465517886
   - rid: 1056179130465517887
   - rid: 1056179130465517888
+  - rid: 1056179130465518500
   m_OriginalGraph: {fileID: 0}
   m_IsInitialised: 0
   m_IsStarted: 0
@@ -189,3 +191,23 @@ MonoBehaviour:
           m_Value1: 16080803223933135363
         Name: HQ
         m_Value: {fileID: 0}
+    - rid: 1056179130465518500
+      type: {class: 'BlackboardVariable`1[[BoolEventChannel, Core]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 8298651215439263844
+          m_Value1: 16120003712000574039
+        Name: BoolEvent
+        m_Value: {fileID: 11400000, guid: 0e01408495f623747b1d52253f7b5ac7, type: 2}
+--- !u!114 &4107738294139742809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6344617156490347010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9135f630abfae5a498777e1169307c42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Core::Enemy

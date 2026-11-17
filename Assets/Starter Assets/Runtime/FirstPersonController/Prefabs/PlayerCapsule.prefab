@@ -420,3 +420,4 @@ MonoBehaviour:
   _spawnPoint: {fileID: 9000973838880258658}
   _canonBallPrefab: {fileID: 8386454971214559523, guid: cfee5da37409b7c4e890d0a0a8383048, type: 3}
   _forceMultiplier: 60
+  _cooldown: 0.5

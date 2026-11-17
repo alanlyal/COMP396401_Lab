@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - HarvestingPlot
+  - CinemachineTarget
+  - CanonBall
+  - Enemy
   layers:
   - Default
   - TransparentFX
